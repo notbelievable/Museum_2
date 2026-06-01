@@ -83,10 +83,15 @@
   }
 }
 
-@mixin hover() {
+@mixin hover($color: null, $scale: null) {
   transition: all 0.3s ease;
 
   &:hover {
-    transform: scale(1.1);
+    @if $scale {
+      transform: scale($scale);
+    }
+    @if $color {
+      color: $color;
+    }
   }
 }

@@ -6,6 +6,8 @@
 
   box-sizing: border-box;
   padding-block: 90px 120px;
+  max-width: 1280px;
+  margin: 0  auto;
 
   @include tablet {
     @include grid;

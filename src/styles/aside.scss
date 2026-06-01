@@ -19,10 +19,7 @@
   overflow-y: auto;
 
   @include desktop {
-    margin-inline: auto;
-    max-width: 1280px;
-    right: 0;
-    left: 0;
+    overflow-y: hidden;
   }
 
   &__top-bar {
@@ -70,7 +67,7 @@
       display: block;
       height: 100%;
       width: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
     }
   }
@@ -132,6 +129,10 @@
       font-size: 16px;
       font-weight: 600;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     @include tablet {
