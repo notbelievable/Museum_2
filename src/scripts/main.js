@@ -27,4 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     });
   });
+
+  const subscribeForm = document.querySelector('.subscribe-form');
+
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      subscribeForm.reset();
+    });
+  }
 });

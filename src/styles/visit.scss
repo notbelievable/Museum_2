@@ -7,8 +7,6 @@
 
   padding-block: 50px;
   background-color: $c-back;
-  max-width: 1280px;
-  margin: 0  auto;
 
   @include tablet {
     padding-block: 80px;
