@@ -33,4 +33,8 @@
   &__card-text {
     margin-block: 20px 0;
   }
+
+  &__card-img {
+    @include hover($scale: 1.04);
+  }
 }

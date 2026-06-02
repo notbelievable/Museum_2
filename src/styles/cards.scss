@@ -24,6 +24,8 @@
     @include desktop {
       min-height: 484px;
       object-fit: contain;
+
+      @include hover($scale: 1.04);
     }
   }
 
