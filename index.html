@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en" class="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Museum2</title>
+    <link rel="icon" href="/Museum_2/assets/NAMU-1-BP9iV4Nx.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,500;1,500&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,500;1,500&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/Museum_2/assets/index-DhWPzpJs.js"></script>
+    <link rel="stylesheet" crossorigin href="/Museum_2/assets/index-DYPsDBMP.css">
+  </head>
+  <body class="body">
+    <header class="top-bar">
+
+      <a
+      class="top-bar__logo-link"
+      href="#">
+        <img
+        class="top-bar__logo-img"
+        src="data:image/png;base64,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" alt="logo-icon">
+      </a>
+
+      <div class="top-bar__item">
+        <a
+        class="top-bar__ua-link"
+        href="#">UA<img
+        class="top-bar__ua-img"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAJlJREFUeAGVkGEKhCAQhR1hF/q33sCrdLNu1lHyBiKuG2ygzYuIkrQSBnTmfY83Chd8535hsOOoxc0DLRjnfUcufAfuaUFkIslWNY25gmWKvUhJ89PI+J9aXNDAoJYkh1eWB9ZqJOFKpXW22NCwFsxRUDGpwZSbyPer3/8J+nlspZQ5NTgzWZoFuHgO65R2fmDyHN6bcH1qmhmSKsSpomkZrgAAAABJRU5ErkJggg=="
+        alt="ua-arrow">
+        </a>
+
+        <button class="top-bar__menu-btn"></button>
+      </div>
+
+    </header>
+
+    <section class="first-screen">
+      <div class="first-screen__item">
+        <p
+        class="first-screen__date">
+        10 серпня - 10 листопада
+        </p>
+        <h1
+        class="first-screen__art">
+        Мистецтво ХІХ - ХХ ст.
+        </h1>
+        <p
+        class="first-screen__text">
+        Внесок українських митців у
+        світову культуру 19-20 ст.
+        </p>
+        <a
+        class="first-screen__link-btn link-btn"
+        href="#events">Купити квиток</a>
+      </div>
+
+      <span class="first-screen__event">10.08 - 10.10</span>
+      <hr class="first-screen__event-rule">
+
+      <div class="first-screen__images">
+        <img
+      class="first-screen__img"
+      src="/Museum_2/assets/img-1-xJT0rKWA.png" alt="title-img">
+      </div>
+
+    </section>
+
+    <section class="current-exhibitions" id="current-exhibitions">
+      <h3 class="current-exhibitions__title title">Актуальні виставки</h3>
+
+      <div class="current-exhibitions__card card">
+        <img
+        class="current-exhibitions__card-img card-img current-exhibitions__card-img--first"
+        src="/Museum_2/assets/image-angel-21V2m0HV.png"
+        alt="card-img">
+        <p class="current-exhibitions__card-date card-date">11.07 - 22.09</p>
+        <h4 class="current-exhibitions__card-title card-title">Кураторська виставка “Ангели”</h4>
+        <p class="current-exhibitions__card-text card-text">
+          Виставковий проект «Ангели» – знакова подія
+          для української культури і водночас наймасштабніший...
+        </p>
+        <a
+      class="current-exhibitions__card-link link-btn"
+      href="#events">Купити квиток</a>
+      </div>
+
+      <div class="current-exhibitions__card card">
+        <img
+        class="current-exhibitions__card-img card-img"
+        src="/Museum_2/assets/image-poet-N0TOCHuB.png"
+        alt="card-img">
+        <p class="current-exhibitions__card-date card-date">Діє постійно</p>
+        <h4 class="current-exhibitions__card-title card-title">Мистецтво ХХ ст. — XXI ст.</h4>
+        <p class="current-exhibitions__card-text card-text card-text-two">
+          Знакові роботи Алли Горської, Миколи Самокиша,
+          Федора Кричевського та інших митців.
+        </p>
+
+        <a
+        class="current-exhibitions__card-link link-btn"
+        href="#events">Купити квиток</a>
+      </div>
+
+      <a
+      class="current-exhibitions__card-arc card-arc"
+      href="#">Архів виставок<img
+      class="current-exhibitions__arrow arrow"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAS1JREFUeAHF1kFqg0AUBuB/RneNwVXWHqFQLd01PUF7gyYnCL1JblB7gh6hWRd6hiwD4yKL0p3O65hFIEhgZt4z+SEQR+T7fYMowMiuyhZNme1NlW3N/c0rAqPAiKmmWxAVxwVtF7Pvvw/f6zU4IcpPjq2uQybAwjuFt8FiQAHW2Pv0+54Q3gcnPLaAjXMKiOCxBcTwmAKieGgBcTykwCi4b4ED3pSTOVlVQDik8eKA53MFlLmbrqFohQunAz0pU2aEa0TZWruxbHCNWGzStk2WSdqu3OhzSIdU4W5xPlxHPftxe46RsnvIi6SzXyev3CP8u+z/jvOce8Cj4L6wOB4Ci+KhsBgeA4vgsTAb58B9WB+QaWs/Y2E2TqDbWJiNK9A6FhbJvpo8Nu6HiPwDj+zQGRX7bS0AAAAASUVORK5CYII=" alt="arrow-img">
+      </a>
+    </section>
+
+    <section class="events" id="events">
+      <h3 class="events_title title">Найближчі події</h3>
+
+      <div class="events__card card">
+        <img
+        class="events__card-img card-img"
+        src="/Museum_2/assets/foto1-B1hN_dU-.png"
+        alt="card-img">
+        <div class="events__card-item">
+          <p class="events__card-date card-date">14.08 о 13:00</p>
+          <h4 class="events__card-title card-title">
+          Кураторські екскурсі ї від Павла Гудімова
+          </h4>
+          <p class="events__card-text card-text">
+          Таємниці підготовки, історії експонатів,
+          магія дійства до і в момент вашої присутності –
+          розгортатиметься...
+          </p>
+          <a
+        class="events__card-link link-btn"
+        href="#">Зареєструватись</a>
+        </div>
+      </div>
+
+      <div class="events__card card">
+        <img
+        class="events__card-img card-img"
+        src="/Museum_2/assets/foto2-qUVaICyQ.png"
+        alt="card-img">
+        <div class="events__card-item">
+          <p class="events__card-date card-date">16.08 о 13:00</p>
+          <h4 class="events__card-title card-title">
+          Майстер-клас “Подорож до Австралії”
+          </h4>
+          <p class="events__card-text card-text">
+          Цієї неділі о 14:00 на арт-мандрівників чекає
+          останній пункт кругосвітньої подорожі - Австралія.
+          </p>
+          <a
+          class="events__card-link link-btn"
+          href="#">Зареєструватись</a>
+        </div>
+      </div>
+
+      <a
+      class="events__card-arc card-arc"
+      href="#">Календар подій<img
+      class="events__arrow arrow"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAS1JREFUeAHF1kFqg0AUBuB/RneNwVXWHqFQLd01PUF7gyYnCL1JblB7gh6hWRd6hiwD4yKL0p3O65hFIEhgZt4z+SEQR+T7fYMowMiuyhZNme1NlW3N/c0rAqPAiKmmWxAVxwVtF7Pvvw/f6zU4IcpPjq2uQybAwjuFt8FiQAHW2Pv0+54Q3gcnPLaAjXMKiOCxBcTwmAKieGgBcTykwCi4b4ED3pSTOVlVQDik8eKA53MFlLmbrqFohQunAz0pU2aEa0TZWruxbHCNWGzStk2WSdqu3OhzSIdU4W5xPlxHPftxe46RsnvIi6SzXyev3CP8u+z/jvOce8Cj4L6wOB4Ci+KhsBgeA4vgsTAb58B9WB+QaWs/Y2E2TqDbWJiNK9A6FhbJvpo8Nu6HiPwDj+zQGRX7bS0AAAAASUVORK5CYII=" alt="arrow-img">
+      </a>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="visit__images">
+        <img
+        class="visit__images-img"
+        src="/Museum_2/assets/img_07-CGeTgvPo.png" alt="img-visit">
+      </div>
+      <div class="visit__item">
+        <h2 class="visit__title">Сплануйте візит до музею</h2>
+        <p class="visit__text">Оберіть зручний день,
+          зареєструйтесь на події, що цікавлять, купіть квиток
+          заздалегідь, щоб ніщо не завадило вам насолоджуватись
+          мистецтвом.
+        </p>
+        <a
+        class="visit__link link-btn"
+        href="#events">Почати</a>
+      </div>
+    </section>
+
+
+    <section class="news" id="news">
+      <h3 class="news__title title">Новини</h3>
+
+      <div class="news__card card">
+        <img
+        class="news__card-img"
+        src="/Museum_2/assets/foto3-ba2KWXii.png" alt="foto-img">
+
+        <p class="news__card-date card-date">9 серпня 2019</p>
+        <h4 class="news__card-title card-title">Оголошення переможця</h4>
+        <p class="news__card-text card-text">
+        Друзі, сьогодні п'ятниця! А це означає, що час
+        оголосити переможця розіграшу...
+        </p>
+      </div>
+
+      <div class="news__card card">
+        <img
+        class="news__card-img"
+        src="/Museum_2/assets/foto4-DuTsbqW1.png" alt="foto-img">
+
+        <p class="news__card-date card-date">9 серпня 2019</p>
+        <h4 class="news__card-title card-title">Міжнародний день котів</h4>
+        <p class="news__card-text card-text">
+        Музей з левами не може просто так взяти і пропустити
+        Міжнародний день котів!
+        </p>
+      </div>
+
+      <a
+      class="news__card-arc card-arc"
+      href="#">Усі новини<img
+      class="news__arrow arrow"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAS1JREFUeAHF1kFqg0AUBuB/RneNwVXWHqFQLd01PUF7gyYnCL1JblB7gh6hWRd6hiwD4yKL0p3O65hFIEhgZt4z+SEQR+T7fYMowMiuyhZNme1NlW3N/c0rAqPAiKmmWxAVxwVtF7Pvvw/f6zU4IcpPjq2uQybAwjuFt8FiQAHW2Pv0+54Q3gcnPLaAjXMKiOCxBcTwmAKieGgBcTykwCi4b4ED3pSTOVlVQDik8eKA53MFlLmbrqFohQunAz0pU2aEa0TZWruxbHCNWGzStk2WSdqu3OhzSIdU4W5xPlxHPftxe46RsnvIi6SzXyev3CP8u+z/jvOce8Cj4L6wOB4Ci+KhsBgeA4vgsTAb58B9WB+QaWs/Y2E2TqDbWJiNK9A6FhbJvpo8Nu6HiPwDj+zQGRX7bS0AAAAASUVORK5CYII=" alt="arrow-img">
+      </a>
+    </section>
+
+    <section class="subscribe">
+      <h3 class="subscribe__title title">Підпишіться на дайджест</h3>
+
+      <p class="subscribe__text card-text">Першими дізнавайтесь про новини
+      музею та розіграші, отримуйте запрошення на події та
+      читайте статті від кураторів
+      </p>
+
+      <form
+      class="subscribe-form">
+        <label class="subscribe-form__label">
+          <input
+          class="subscribe-form__input"
+          type="email"
+          name="user_email"
+          placeholder="e-mail"
+          autocomplete="one-time-code"
+          required>
+        </label>
+        <button type="submit" class="subscribe-form__link link-btn">Підписатись</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__contacts">
+
+        <div class="footer__contacts-container">
+          <h4 class="footer__contacts-title footer__title">Контакти</h4>
+          <div class="footer__contacts-item">
+            <a
+            href="https://maps.app.goo.gl/RrpEwyAhQoniQ66B6" target="_blank"
+            class="footer__contacts-link">Київ,<br>
+            вул. М. Грушевського, 6<br>
+            </a>
+            <span>
+              <a
+              href="tel:2781357"
+              class="footer__contacts-link">тел. 278-13-57,</a>
+              <a href="tel:2787454" class="footer__contacts-link">278-74-54</a><br>
+            </span>
+            <a href="mailto:info@namu.kiev.ua" class="footer__contacts-link">info@namu.kiev.ua</a>
+          </div>
+        </div>
+
+        <div class="footer__contacts-socials">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img
+            class="footer__contacts-img"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAP1JREFUeAHtlM2twjAMgG23D/VRJNoNOgpswApMwAiwCSPACIxQJgAmCLRUHICYCHGiSVuicCLfpVJsf3LzY4QOiLIcBQHOmWHUlottCaeqXKi0OXQEXcoahaIoJhTQCj6ETIEgpBlYoO1QCJFQ70+ABaF2NYoSkHdohPnIhHk3YTu5vN7GaZoe3wMEFkiGqU5mLYzi2Li/VsImflCIRVUtNesJA0+MRYBr9amfsrqbeKrODI5Q423j9JeRIHcrlI6F6vVvne7hMB6guw4ZnpMnVO3tdXE1KDNzbb1GtbZ51dURl0tG8r4DA71+nP0jHnQxPxy80Au90Au/JHwAl6tNdhhKVdcAAAAASUVORK5CYII=" alt="facebok">
+          </a>
+          <a href="https://x.com/?lang=ru" target="_blank">
+            <img
+            class="footer__contacts-img"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAzpJREFUeAHtmAtW2kAUhu/cRHpQVFhB6QqkKyhdgXYF0hWoKyiuQF2BsILaFQgrkK5AugLC2xpmbu8NhCYI8kiE9hy+c4Ywk0nmP/O4808AtmzZLArekEa/n0UzKHAzx5zNckpzcjjVFaiaNqac2d+vTH220UhnMhlHBV+WSSbrEIcwojR2O0VQ6mxeXRZ6pxEv/Lb9Z7n84SCVKnsCG51OARXcGoKLTCp1DRHweo3MPRBll3isZrS5sWw8JYI85+uHe6kPcgO9H4Qj76rgqtXt3kr3woqsIE7IoYW3I3GgCIrj93kFXMEvIKACvks8NNrtPCyJjMQK4sIQ1DTRL2lfEg5LlROuRFlEdd/qdK5kyGBBLIRTiIri3uS2JVm2/R6Hoqk+rS4pOJcha/X7CzXMQ5SDuFB4fpBMlj2BZmB+wuxWs2R0qdnrPi4w7CvP3Ql1xcPd3Rv5Nxxire9gGJ9m83fY718RWoc4xO3tXfo5T6AERL7cLfI4D3tehEqPNnu9s4k56kBEELESyvt/jKEyLIOsVjLXaPSjiOXw9B1igLTOBvOhra7Z7dzypQAbBNHK7yeTVT9vy0+z075WCg+11lUOmCcQ22SPjieQtxBiCiyuABtm8PQUiijDMKPpB/wbOKMFO2a4itnyiKuADUOgKpNl41Wsn5+/QixxbHWQ6EUnjQVK15pn9zNsUKR23epkGQYzLLI+ElmD9VOS9icLQwJlV7ASiW9ixyGGXWEZrJ3EVKNsBzNiu1u9TtY3jmuklEokphoWnCzQv90vsN55KNPqctbNFwLXvVjE3k+bez44rTCwWErwpqiinNxerQFzaLRaBWXhWfDcEg9h3zezFixIu9//ZIxnbKMbCbbzvmOeh71IJXHQhoxYsWjiiBy07JOgnZoHvnZTTvlixcRBRz5OyuHcHXxcRpyg+Cyb48bT/JnC8a7y6YGPe2zAcnzai8kbLjbfpmGD6zqY2JFvKHkWmfWmJRl2FtHhgF8h173gqLDy1hlaJHyuOB71Wh6GX6NWUeWwbapZllVcdjhhnsAg3tAbk0Mbj0hCDEFayTxUKh0SI1ODBSlFdUWqwratOmk6t2z5n/kDFcSFawdqTnUAAAAASUVORK5CYII=" alt="twitter">
+          </a>
+          <a href="https://web.telegram.org/" target="_blank">
+            <img
+            class="footer__contacts-img"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAA2FJREFUeAHtmOtV4kAUx+9MPHsWwYV0kO1AKliswFiBWAFagVqBbgViBboVyFawbAUbK0jAJPjAmb03JNkhEMhL5cP+zwlhksnwy71zHwcGGyhbyhafTA6ZlB0GGyT74aGjadq+lKKLw5aUMNiCDxZZCwhsi/cQqINw8T3GYfhhFgzc6LvHiNHDYWvZHAbMfHfAmRvZKVlr3Vwhof0ugFmstUzNeoO96R6MreV7HXJYLkkY0qlyQMVa+zjcRVcWkmTMonNlgHGK8L0uwmVyI2MwkMAMkNJYvMcGUBYwTqggzGSKWCNLvIoTvqWdLoMjccaKu3jeWphQ8zzM4FIIuEa4mzQ40vTx8fdselYoSqieZ2ocDrOkiCUacq4dTwHuuRR3q+BQFkbwV/qy1oK26+5yJk3wvR6+Tiv3ppfSwZJw2azXz+3JxMgAh7fBir6nAs4n1GLpkmqpfJke6bpuZYUjRQGyAJhMqEVTRGA1rp216tvfg3VzwAWAMMuBMWCphJpkA3mLVjvR9R2rCBzpVcr7GHbkuxe46jGUl4VB0N2p1X5GF4rAoRwMED0a8OZ240Q8v1DE9KGoKHU8v7Tn4Ci4xOuvnHC0b4fqmNMHbWKkPlJALcgmslqHXhLXcObgGNxBjsYgEvWAC4CRFNA9TOVnq0HZWdJqZeFCJGvuV1ZNtW3b4J8/HWJj1sWhEV4eItgBvczCfEzkHORVcTjEQ4+oL50pZAkUNK3DNX6BT/TJpck5Y9ftSgZXUFL48rq6XXLllJHnIYA01SirEo56wGaj0VYvccghIcQ1nlqUN6FqOPjXA6rKBQjTKUWYw7WgGQ0XhVOoSGoFiZQLkPYGNplDdEUX3kClAUkS+C0k3FyV1BIXKTegeHq6Dh5U3FyRHL3RKG/B0M0DNKW5YppFPwg5lCxxkXIDBovN3GykuNmiSkRVBrKXzIUSB2UABWM/goc5/5a4RVWmTVWGjqBkZoRkokJAvVazAjdDUAJVuD21CoSQ+PcFu123JtM0C6oCJMlZW26ExwKcAul8qdcPwuYjVcmmozSgmIpowX4anKpmrX6eCpkSIKU1mni5q4g9Hpsjz7XxkNHheN4NbJKoO0KwPzGk7/fS5hZ2cRkpER64NvqbY+OElmyN3HGfzvBfb6S/C+z0tzjul7gAAAAASUVORK5CYII=" alt="telegram">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+            class="footer__contacts-img"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAu9JREFUeAHtV+F52kAM1Z0JX/hKKWzgEcgGMEHLBLBBswF0g2SCkgmSDUInqDeINzABbLe4tioZ23EcE87GQH7w/iCfdeeHdPekAzhjP4jsgIXYls7qml4N6VGHQ0IIUwT44Hvej06nM891ST9YrqtLDB4BUYdjgogGQvY7jYaZfSXh1OQY9E3N93/mvUoIakEwPgm5CCigZy2Xvex4QhABv8GJIaT8nh2TKbsNh4UppdYLEK4EiIc8BwHYfTsW4dleIRwQTO5zo/GLbcuy2rJ+YeX5ffnUfHVwJRwJtctLM7a3SUoeKiFIoTeQ0kYbfcZ2no/n2BNWCraf7eUEFFE+xYhz2tU3wXp9m40IpVAHTetJTY7hrdiz79b9nk1xKYKIFCnPG+xKFROlvXZPZhcUUQVBgxa5SkisViNNwpBI6+GCCCZFb9pqNO5in4WzeqT3PZXF9yVoBmuvT5EzuWZrrn3/zoeNyHcendonUJCyvU4xRWfC5MKJrrMrKl3tIkzv5tRKcQMlUIggdR0bHaO00kbcua+4fC1cl7siCP6sb6EE1AkiGHH0eM8pz/P9Ef9EB8qAglAmiBt52Nio3idSFBNfQW0VFIR6BIVQVv/twML1XpmgSLViQpCUKALxxZfswxEkQeqyXLDp/wvuVKfRB6b8G5U5ZcFOzS/gXK+H/Vqn1ZpSFGcKU4xWs7n5M77fgxIo2CzgdRLFv94A3jmVXA5ZqNkOrxNSjKEECpc6EusZRaUfP1uLxUjU5BDik017jtOaRI7XduzfKrrJqKRZAC5jUhvk3cLSUCiHOwmW7Qe7fAPkKhH3eFli3PNJx34qQi4PVbX8BqV+zlpJly8dSpzWGNkI1qAadDFctvprTTrFFVSK6pEQJF0rXMiPgYRgkepwKLB2ZscSglwdAE4bxbgsZsZeQMrP1cGE08BMi3uMVwS5IY3K07EjacRlMQuxbcbCtr8GACPaGbrYQ9e2gu7VdNk3smXxjDM+Gv4DqWlenSvAPmkAAAAASUVORK5CYII=" alt="instagram">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__schedule">
+        <h4 class="footer__schedule footer__title">Розклад роботи</h4>
+
+        <p class="footer__schedule-text">
+        ПН: вихідний<br>
+        ВТ: вихідний<br>
+        СР: 10:00 - 17:00<br>
+        ЧТ: 10:00 - 17:00<br>
+        ПТ: 12:00 - 19:00<br>
+        СБ: 11:00 - 18:00<br>
+        НД: 10:00 - 17:00
+        </p>
+      </div>
+
+      <div class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">
+              <span class="footer__link-span">Головна</span>
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#current-exhibitions" class="footer__nav-link">Виставки</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#events" class="footer__nav-link">Події</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#news" class="footer__nav-link">Новини</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__bottom-copiright">© 2010 — 2020</p>
+        <a
+        class="footer__bottom-privacy"
+        href="#">Privacy — Terms</a>
+        <a href="#">
+          <img
+          class="footer__button"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAMFJREFUeAHt1NEJwjAQxvHvoi8+ZoOu0gkdwRV0AruJ2UAK1oLSnBxakVo1l/ZFuD8Ejl7JD/pQwLJGOrZtUZ+bgxyZkRFBmUCO4x7Mxf0GCpFc6VerAEUq+A193qLHXeqLAzS8rII8k53msyfBQzRermW/e8xq/Cc8hnrvQ7+XOQd3U9ApuJuK5uJuDjQHH4UX3G206CecYlwnw13EjkFbLTrEmVARUYU5q5sTy0FmyT+QuTPYYIP/H14ivwDL+tINq3zgmDMi56sAAAAASUVORK5CYII="
+          alt="scrol-icon">
+        </a>
+      </div>
+
+    </footer>
+
+    <aside class="aside">
+      <header class="top-bar aside__top-bar">
+        <a
+        class="top-bar__logo-link"
+        href="#">
+          <img
+          class="top-bar__logo-img"
+          src="data:image/png;base64,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" alt="logo-icon">
+        </a>
+
+        <div class="top-bar__item">
+          <a
+          class="top-bar__ua-link aside__ua-link"
+          href="#">UA<img
+          class="top-bar__ua-img"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAJlJREFUeAGVkGEKhCAQhR1hF/q33sCrdLNu1lHyBiKuG2ygzYuIkrQSBnTmfY83Chd8535hsOOoxc0DLRjnfUcufAfuaUFkIslWNY25gmWKvUhJ89PI+J9aXNDAoJYkh1eWB9ZqJOFKpXW22NCwFsxRUDGpwZSbyPer3/8J+nlspZQ5NTgzWZoFuHgO65R2fmDyHN6bcH1qmhmSKsSpomkZrgAAAABJRU5ErkJggg=="
+          alt="ua-arrow">
+          </a>
+
+          <button
+          class="top-bar__menu-btn
+          aside__menu-btn"></button>
+        </div>
+      </header>
+
+      <div class="aside-container">
+
+        <div class="aside__div">
+          <div class="aside__div-item">
+            <p class="aside__schedule">Розклад сьогодні:<br>
+              <span class="aside__schedule-time">12:00 - 19:00</span>
+            </p>
+            <p class="aside__address">Адреса:<br>
+              <a
+              class="aside__address-link"
+              href="https://maps.app.goo.gl/uVtBAGB6L3bTnicy8" target="_blank">Київ, вул. М. Грушевського, 6</a>
+            </p>
+          </div>
+          <ul class="aside__nav nav">
+            <li class="nav__item"><a href="#current-exhibitions" class="nav__link">Актуальні виставки</a></li>
+            <li class="nav__item"><a href="#events" class="nav__link">Найближчі події</a></li>
+            <li class="nav__item"><a href="#news" class="nav__link">Новини</a></li>
+          </ul>
+          <a
+          class="aside__link-btn link-btn"
+          href="#events">Купити квиток</a>
+        </div>
+
+        <div class="aside__back">
+          <img
+          class="aside__back-img"
+          src="/Museum_2/assets/img_menu-IOhH4qh6.png" alt="menu-img">
+        </div>
+
+      </div>
+
+    </aside>
+
+  </body>
+</html>
